@@ -1,0 +1,14 @@
+<h3>New book</h3>
+<%= form_for(@book, url:'/todolists') do |f| %>
+
+	<h5>タイトル</h5>
+	<%= f.text_field :title %>
+
+	<h5>本文</h5>
+	<%= f.text_area :body %><br>
+
+	<%= f.submit 'create box' %>
+
+<% end %>
+
+

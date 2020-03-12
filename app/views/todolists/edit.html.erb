@@ -1,0 +1,9 @@
+<h2>Editing Book</h2>
+<%= form_for(@book,url:"/todolists/#{@book.id}") do |f| %>
+	<h6>Title</h6>
+	<%= f.text_field :title %>
+	<h6>Body</h6>
+	<%= f.text_area :body %><br>
+	<%= f.submit 'Update Book' %><br>
+<% end %>
+Show|Back

@@ -1,0 +1,13 @@
+<h2>Books</h2>
+
+<% @books.each do |book| %>
+	<p>title</p>
+	<span><%= book.title %>
+
+		<!-- <p>body</p>
+	 <%= book.body %> -->
+
+
+		<%= link_to book.title, todolist_path(book.id) %>
+	</span>
+<% end %>
