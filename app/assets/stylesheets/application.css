@@ -11,5 +11,36 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require_self
+ *= require_selfn
  */
+
+* {
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+th {
+	display: table-cell;
+	vertical-align: inherit;
+	font-weight: bold;
+	text-align: -internal-center;
+}
+
+.title-box {
+	text-align: center;
+	float: left;
+	margin: 20px;
+}
+
+.body-box {
+	text-align: center;
+	float: left;
+	margin: 20px;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
