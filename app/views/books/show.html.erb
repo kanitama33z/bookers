@@ -1,0 +1,15 @@
+<% if flash[:notice] %>
+	<div class="flash">
+		<%= flash[:notice] = "Book was successfully created." %>
+	</div>
+<% end %>
+
+<h5>Title:</h5>
+<%= @book.title %>
+
+<h5>Body:</h5>
+<%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+|
+<%= link_to "Back", book_path %>

@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-  get 'todolists/new' => 'todolists#new', as: 'new_todolist'
-  
-  get 'top' => 'homes#top'
 
-  post 'todolists' => 'todolists#create'
-
-  # get 'todolists' => 'todolists#index'
-
-  get 'todolists/:id' => 'todolists#show', as: 'todolist'
-
-  get 'todolists/:id/edit' => 'todolists#edit', as: 'edit_todolist'
-
-  patch 'todolists/:id' => 'todolists#update', as: 'update_todolist'
-
-  delete 'todolists/:id' => 'todolists#destroy', as: 'destroy_todolist'
+	get '/' => 'books#top'
 
 
-  
+  get 'books/' => 'books#books', as: 'book'
+
+  post 'books/' => 'books#create'
+
+  get 'books/:id' => 'books#show', as: 'show_book'
+
+  get 'books/:id/edit' => 'books#edit', as: 'edit_book'
+
+  patch 'books/:id' => 'books#update', as: 'update_book'
+
+  delete 'books/:id' => 'books#destroy', as: 'destroy_book'
+
+
+  # resources :books
 end

@@ -8,7 +8,7 @@ class TodolistsController < ApplicationController
   def create
   	book = Book.new(book_params)
   	book.save
-  	redirect_to todolist_path(book.id)
+  	redirect_to books_path(book.id)
   end
 
   # def index
@@ -17,7 +17,7 @@ class TodolistsController < ApplicationController
 
   def show
   	@book = Book.find(params[:id])
-  	
+
   end
 
 
@@ -28,13 +28,13 @@ class TodolistsController < ApplicationController
   def update
   	book = Book.find(params[:id])
   	book.update(book_params)
-  	redirect_to todolist_path(book.id)
+  	redirect_to books_path(book.id)
   end
 
   def destroy
   	book = Book.find(params[:id])
   	book.destroy
-  	redirect_to new_todolist_path
+  	
   end
 
   private
